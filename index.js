@@ -1,5 +1,16 @@
+// Init client scripts
 Config.options.clientScripts = [];
 
+/**
+ * serveClientFile
+ * Serves client files from plugins
+ *
+ * @name serveClientFile
+ * @function
+ * @param {Object} req The request object
+ * @param {Object} res The response object
+ * @return
+ */
 function serveClientFile(req, res) {
     var url = req.url
       , splits = url.split("/")
@@ -21,6 +32,7 @@ function serveClientFile(req, res) {
     Statique.serveFile(fullPath, 200, res, req, {}, "/");
 }
 
+// Add the new route
 Statique._regexpRoutes.push({
     regexp: /\/api\/serve-file\/.*\/.*/
   , type: "regexp"
