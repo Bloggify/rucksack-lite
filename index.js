@@ -22,7 +22,7 @@ function serveClientFile(req, res) {
 }
 
 Statique._regexpRoutes.push({
-    regexp: /\/api\/getClientScript\/.*\/.*/
+    regexp: /\/api\/serve-file\/.*\/.*/
   , type: "regexp"
   , url: {
         get: serveClientFile
