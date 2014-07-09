@@ -18,10 +18,7 @@ function serveClientFile(req, res) {
     }
 
     var fullPath = Config.root + "/plugins/" + plugin + "/client/" + pathToFile;
-    debugger;
-    // Fs.createReadStream(fullPath).pipe(res);
     Statique.serveFile(fullPath, 200, res, req, {}, "/");
-
 }
 
 Statique._regexpRoutes.push({
