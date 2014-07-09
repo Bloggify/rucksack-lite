@@ -9,7 +9,6 @@ function serveClientFile(req, res) {
         return Statique.error(req, res, 404);
     }
 
-    debugger;
     var plugin = splits[3]
       , pathToFile = splits.slice(4, splits.length).join("/")
       ;
@@ -20,7 +19,9 @@ function serveClientFile(req, res) {
 
     var fullPath = Config.root + "/plugins/" + plugin + "/client/" + pathToFile;
     debugger;
-    Fs.createReadStream(fullPath).pipe(res);
+    // Fs.createReadStream(fullPath).pipe(res);
+    Statique.serveFile(fullPath, 200, res, req, {}, "/");
+
 }
 
 Statique._regexpRoutes.push({
