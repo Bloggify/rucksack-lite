@@ -34,7 +34,7 @@ function serveClientFile(req, res) {
 
 // Add the new route
 Statique._regexpRoutes.push({
-    regexp: /\/api\/serve-file\/.*\/.*/
+    regexp: /\/api\/plugin-file\/.*\/.*/
   , type: "regexp"
   , url: {
         get: serveClientFile
