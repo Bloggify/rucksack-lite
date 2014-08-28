@@ -1,5 +1,5 @@
 // Init client scripts
-Config.options.clientScripts = [];
+Config.options = Config.options || {};;
 
 /**
  * serveClientFile
