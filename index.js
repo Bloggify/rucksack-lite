@@ -1,6 +1,3 @@
-// Init client scripts
-Config.options = Config.options || {};;
-
 /**
  * serveClientFile
  * Serves client files from plugins
@@ -12,9 +9,11 @@ Config.options = Config.options || {};;
  * @return
  */
 function serveClientFile(req, res) {
-    var url = req.url
-      , splits = url.split("/")
-      ;
+}
+
+Bloggify.server.page.add(/\/api\/plugin-file\/.*\/.*/, function (lien) {
+
+    var splits = lien.pathName.split("/");
 
     if (splits.length <= 3) {
         return Statique.error(req, res, 404);
@@ -28,15 +27,6 @@ function serveClientFile(req, res) {
         return Statique.error(req, res, 404);
     }
 
-    var fullPath = Config.root + "/plugins/" + plugin + "/client/" + pathToFile;
-    Statique.serveFile(fullPath, 200, res, req, {}, "/");
-}
-
-// Add the new route
-Statique._regexpRoutes.push({
-    regexp: /\/api\/plugin-file\/.*\/.*/
-  , type: "regexp"
-  , url: {
-        get: serveClientFile
-    }
+    var fullPath = Bloggify.ROOT + "/plugins/" + plugin + "/client/" + pathToFile;
+    lien.file(fullPath);
 });
