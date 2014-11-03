@@ -7,3 +7,6 @@ After install, this will add the following route:
 ```
 /api/serve-file/<plugin-name>/path/to/some/client/file.extension
 ```
+
+## License
+See the [LICENSE](./LICENSE) file.
