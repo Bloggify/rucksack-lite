@@ -15,5 +15,5 @@ Bloggify.server.page.add(/\/api\/plugin-file\/.*\/.*/, function (lien) {
     }
 
     var filePath = "/plugins/" + plugin + "/client/" + pathToFile;
-    lien.file(filePath, Bloggify.ROOT);
+    lien.file(filePath, Bloggify.paths.site_dir);
 });
