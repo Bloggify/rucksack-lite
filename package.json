@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/Bloggify/custom-client-files/issues"
   },
-  "homepage": "https://github.com/Bloggify/custom-client-files"
+  "homepage": "https://github.com/Bloggify/custom-client-files",
+  "blah": {
+    "configuration": {
+      "name": "_custom-client-files",
+      "source": "git@github.com:BloggifyPlugins/custom-client-files.git",
+      "version": "2.0.0"
+    }
+  }
 }
