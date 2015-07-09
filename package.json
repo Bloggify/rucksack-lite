@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BloggifyPlugins/custom-client-files.git"
+    "url": "https://github.com/Bloggify/custom-client-files.git"
   },
   "keywords": [
     "custom",
@@ -16,9 +16,9 @@
     "bloggify"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net/)",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
-    "url": "https://github.com/BloggifyPlugins/custom-client-files/issues"
+    "url": "https://github.com/Bloggify/custom-client-files/issues"
   },
-  "homepage": "https://github.com/BloggifyPlugins/custom-client-files"
+  "homepage": "https://github.com/Bloggify/custom-client-files"
 }
