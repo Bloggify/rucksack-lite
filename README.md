@@ -147,6 +147,7 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
 
+ - [`bloggify`](https://github.com/Bloggify/Bloggify) (by Bloggify)—We make publishing easy.
  - [`rucksack`](https://github.com/Bloggify/rucksack#readme) (by Bloggify)—JavaScript and CSS bundler.
 
 ## :scroll: License
