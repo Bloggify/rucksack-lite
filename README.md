@@ -7,6 +7,8 @@
 
 > The base class for the Rucksack JavaScript and CSS bundler.
 
+For bundling, use [`rucksack`](https://github.com/Bloggify/rucksack).
+
 ## :cloud: Installation
 
 ```sh
@@ -141,6 +143,11 @@ Generates the HTML for both CSS and JS assets. Optionally, a custom array can be
 Have an idea? Found a bug? See [how to contribute][contributing].
 
 
+## :dizzy: Where is this library used?
+If you are using this library in one of your projects, add it in this list. :sparkles:
+
+
+ - [`rucksack`](https://github.com/Bloggify/rucksack#readme) (by Bloggify)—JavaScript and CSS bundler.
 
 ## :scroll: License
 
