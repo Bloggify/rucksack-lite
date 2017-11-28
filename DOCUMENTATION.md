@@ -30,13 +30,6 @@ Downloads the JS scripts from the resource.
 - **String** `resPath`: The path of the resource.
 - **Boolean** `inline`: Confirms if the resource needs to be downloaded or not.
 
-### `_watchCSS(resPath)`
-Watch the CSS paths.
-
-#### Params
-
-- **String** `resPath`: The CSS resource path.
-
 ### `addCSS(resPath, inline)`
 Adds a new CSS path.
 
@@ -45,57 +38,47 @@ Adds a new CSS path.
 - **String** `resPath`: The CSS resource path to add.
 - **Boolean** `inline`: Whether to add the CSS content inline or not.
 
-### `bundleJS(output, cb)`
-Bundles the JS files.
-
-#### Params
-
-- **String** `output`: The output of the JS script.
-- **Function** `cb`: The callback function.
-
-### `bundleCSS(output, cb)`
-Bundles the CSS files.
-
-#### Params
-
-- **String** `output`: The output of the CSS script.
-- **Function** `cb`: The callback function.
-
-#### Return
-- **String** The URL of the script.
-
 ### `bundle()`
-Bundles the JS files with the CSS ones.
+Bundles the JavaScript and CSS resources.
 
 #### Return
-- **Object**
+- **Promise** A promise object.
 
 ### `toObject()`
-Creates an array containing each map to the resources.
+Creates an array of elements containing the resource type and the url.
+
+E.g.:
+
+```js
+[
+ { type: "script", url: "https://.../myscript.js" },
+ ...
+ { type: "stylesheet", url: "https://.../mystyle.css" },
+]
+```
 
 #### Return
 - **Array** The resources list.
 
 ### `cssHtml()`
-cssHtml - description
-Generates the HTML markup for CSS.
+Generates the HTML markup for CSS assets.
 
 #### Return
 - **String** The HTML markup.
 
 ### `jsHtml()`
-Generates the HTML markup for JS.
+Generates the HTML markup for JS assets.
 
 #### Return
 - **String** The HTML markup.
 
 ### `html(resources)`
-Loads the HTML script.
+Generates the HTML for both CSS and JS assets. Optionally, a custom array can be provided.
 
 #### Params
 
-- **Array** `resources`: The resources list.
+- **Array** `resources`: An optional array of assets.
 
 #### Return
-- **String** The source of the script or stylesheet.
+- **String** The HTML markup.
 
