@@ -9,34 +9,35 @@
     "bundler"
   ],
   "license": "MIT",
-  "version": "2.3.6",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Bloggify <support@bloggify.org> (https://bloggify.org)",
   "files": [
     "bin/",
     "app/",
-    "public/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
-    "index.js"
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IonicaBizau/rucksack-new.git"
+    "url": "git+ssh://git@github.com/Bloggify/rucksack-lite.git"
   },
   "bugs": {
-    "url": "https://github.com/IonicaBizau/rucksack-new/issues"
+    "url": "https://github.com/Bloggify/rucksack-lite/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/rucksack-new#readme",
+  "homepage": "https://github.com/Bloggify/rucksack-lite#readme",
   "dependencies": {
     "url-remote": "^1.1.3"
   }
