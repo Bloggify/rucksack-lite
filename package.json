@@ -42,6 +42,6 @@
   },
   "homepage": "https://github.com/Bloggify/rucksack-lite#readme",
   "dependencies": {
-    "url-remote": "^1.1.3"
+    "url-remote": "^1.1.8"
   }
 }
