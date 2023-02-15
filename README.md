@@ -238,6 +238,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - `bloggify`
  - `rucksack`
+ - `@infinitebrahmanuniverse/nolb-ruc`
 
 
 
