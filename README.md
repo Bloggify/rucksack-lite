@@ -106,6 +106,7 @@ console.log(bundler.html())
 
 
 
+
 ## :question: Get Help
 
 There are few ways to get help:
@@ -114,6 +115,8 @@ There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
+
+
 
 
 
@@ -236,9 +239,7 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 ## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - `bloggify`
  - `rucksack`
- - `@infinitebrahmanuniverse/nolb-ruc`
 
 
 
