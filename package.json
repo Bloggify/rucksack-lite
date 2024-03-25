@@ -9,7 +9,7 @@
     "bundler"
   ],
   "license": "MIT",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,6 +42,6 @@
   },
   "homepage": "https://github.com/Bloggify/rucksack-lite#readme",
   "dependencies": {
-    "url-remote": "^2.0.0"
+    "url-remote": "^3.0.0"
   }
 }
