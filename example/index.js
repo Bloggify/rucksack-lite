@@ -1,22 +1,21 @@
 "use strict";
 
-const Rucksack = require("..");
+import RucksackLite from "../lib/index.js";
 
+const __dirname = new URL(".", import.meta.url).pathname;
 
-const r = new Rucksack({
-    jsUrl: "my-bundle.js"
-  , cssUrl: "my-bundle.css"
+const r = new RucksackLite({
+  name: "my-app",
+  bundle_dir: `${__dirname}/output`,
+  bundle_url: "/static",
+  input: "main.js"
 });
 
-// Local files are supposed to be added via `rucksack`
-// (which implements bundling)
-// Those will *not* appear in the HTML output
-r.add(`${__dirname}/data/bar.css`);
-r.add(`${__dirname}/data/main.css`);
+r.add("https://example.com/index.js");
+r.add("https://example.com/styles.css");
 
-// On the other side, remote scripts and styles *will* appear
-// in the output, because they don't need bundling.
-r.add("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.js");
-r.add("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css", false);
-
-console.log(bundler.html())
+console.log(r.html())
+// <script src="/static/my-app.js"></script>
+// <script src="https://example.com/index.js"></script>
+// <link rel="stylesheet" href="/static/my-app.css" />
+// <link rel="stylesheet" href="https://example.com/styles.css" />

@@ -2,58 +2,64 @@
 
 You can see below the API reference of this module.
 
-### constructor
-
-Ruckasck
-Creates a new instance of `Ruckasck`.
+### `RucksackLite(options)`
+Creates a new instance of `RuckasckLite`.
 
 #### Params
 
-- **Object** `opts`: The Rucksack options.
+- **Object** `options`: The options object:
+  - `name` (String): The bundle name.
+  - `bundle_dir` (String): The bundle directory.
+  - `bundle_url` (String): The bundle URL.
+  - `input` (String): The input file.
 
 #### Return
-- **Object** The Rucksack instance.
+- **Object** The Rucksack instance containing:
+  - `opts` (Object): The options object.
+  - `bundle_paths` (Object): The bundle paths:
+    - `js` (String): The JS bundle path.
+    - `css` (String): The CSS bundle path.
+  - `bundle_urls` (Object): The bundle URLs:
+    - `js` (String): The JS bundle URL.
+    - `css` (String): The CSS bundle URL.
+  - `local` (Object): The local resources collection.
+    - `js` (Array): The JS resources.
+    - `css` (Array): The CSS resources.
+  - `remote` (Object): The remote resources collection.
+    - `js` (Array): The JS resources.
+    - `css` (Array): The CSS resources.
+  - `markup` (Object): The cached HTML markup:
+    - `js` (String): The JS HTML markup.
+    - `css` (String): The CSS HTML markup.
+    - `all` (String): The combined HTML markup.
 
-### `add(resPath, root)`
-Downloads the script from the resource file.
+### `add(resource)`
+Adds the resource to the list.
 
 #### Params
 
-- **String** `resPath`: The path of the resource.
-- **String** `root`: The file's root path.
+- **String|Array|RucksackResource** `resource`: The resource path or object or an array of resources.
 
-### `addJS(resPath, inline)`
-Downloads the JS scripts from the resource.
+#### Return
+- **RucksackResource** The resource object.
 
-#### Params
+### bundle
 
-- **String** `resPath`: The path of the resource.
-- **Boolean** `inline`: Confirms if the resource needs to be downloaded or not.
-
-### `addCSS(resPath, inline)`
-Adds a new CSS path.
-
-#### Params
-
-- **String** `resPath`: The CSS resource path to add.
-- **Boolean** `inline`: Whether to add the CSS content inline or not.
-
-### `bundle()`
 Bundles the JavaScript and CSS resources.
 
 #### Return
 - **Promise** A promise object.
 
-### `toObject()`
-Creates an array of elements containing the resource type and the url.
+### `toArray()`
+Creates an array of resource objects. Optionally, a type can be provided to filter the results.
 
 E.g.:
 
 ```js
 [
- { type: "script", url: "https://.../myscript.js" },
- ...
- { type: "stylesheet", url: "https://.../mystyle.css" },
+   {RucksackResource},
+   {RucksackResource},
+   ...
 ]
 ```
 
@@ -77,8 +83,29 @@ Generates the HTML for both CSS and JS assets. Optionally, a custom array can be
 
 #### Params
 
-- **Array** `resources`: An optional array of assets.
+- **Array** `resources`: An array of resources.
 
 #### Return
 - **String** The HTML markup.
+
+### `refreshMarkup()`
+Refreshes the cached HTML markup.
+
+### `RucksackResource(resource)`
+Creates a new instance of `RucksackResource`.
+
+#### Params
+
+- **String|Object** `resource`: The resource path or object containing:
+  - `path` (String): The resource path.
+  - `type` (String): The resource type. Either `js` or `css`.
+  - `root` (String): The root path.
+
+#### Return
+- **RucksackResource** The resource instance containing:
+  - `path` (String): The resource path.
+  - `root` (String): The root path.
+  - `type` (String): The resource type. Either `js` or `css`.
+  - `source_type` (String): The source type. Either `local` or `remote`.
+  - `uri` (String): The resource URI (full path).
 

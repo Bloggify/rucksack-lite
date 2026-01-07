@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "node test/index.js"
+  },
   "name": "rucksack-lite",
   "description": "The base class for the Rucksack JavaScript and CSS bundler.",
   "keywords": [
@@ -11,9 +14,7 @@
   "license": "MIT",
   "version": "5.0.2",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "type": "module",
   "author": "Bloggify <support@bloggify.org> (https://bloggify.org)",
   "files": [
     "bin/",
@@ -43,5 +44,8 @@
   "homepage": "https://github.com/Bloggify/rucksack-lite#readme",
   "dependencies": {
     "url-remote": "^3.0.0"
+  },
+  "devDependencies": {
+    "tester": "^2.0.0"
   }
 }
