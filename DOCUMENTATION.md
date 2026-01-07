@@ -15,7 +15,7 @@ Creates a new instance of `RuckasckLite`.
 
 #### Return
 - **Object** The Rucksack instance containing:
-  - `opts` (Object): The options object.
+  - `options` (Object): The options object.
   - `bundle_paths` (Object): The bundle paths:
     - `js` (String): The JS bundle path.
     - `css` (String): The CSS bundle path.
