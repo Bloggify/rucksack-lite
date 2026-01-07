@@ -12,7 +12,7 @@
     "bundler"
   ],
   "license": "MIT",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "main": "lib/index.js",
   "type": "module",
   "author": "Bloggify <support@bloggify.org> (https://bloggify.org)",
